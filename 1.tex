@@ -1,0 +1,49 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{Irus Grinis}
+\begin{document}
+Integral ODE model of reaction:
+
+
+$$ \frac{d[A_f]}{dt} = 2k_1[G_f][A_f] - \frac{k_p[A]}{[A]+K_m}$$ 
+$$ \frac{d[G_f]}{dt} = V_{in} - k_1[G_f][A_f]$$
+$$ [G_f] = \frac{\int_{\Omega} G_p(x)dx}{Vol(\Omega)}, \Omega \subset \mathbb{R}^n $$
+$$ [A_f] = \frac{\int_{\Omega} A_p(x)dx}{Vol(\Omega)}, \Omega \subset \mathbb{R}^n $$
+$$ V_{in}(t) = \int_{\delta \Omega} V_p(x,t)dx, \delta \Omega - \mbox{boundary of } \Omega $$
+
+Problem.
+
+What are generic solution for $A_p(x)$ and $G_p(x)$?
+ 
+Model.
+
+ 
+Suppose $\Omega$ is $[0,1]$.
+Discret model. 
+Interval $[0,1]$:  $N$ subintervals. Define  $G_p(i)$, $A_p(i)$. These  functions are:
+$$G_p(i)=G_p^{in}(i) + G_p^{out}(i) + G_p^{AtoG}(i) - G_p^{GtoA}(i) + G_p^{-}(i)+G_p^{+}(i)$$
+
+$$A_p(i)=A_p^{in}(i) + A_p^{out}(i) - A_p^{AtoG}(i) + A_p^{GtoA}(i) + A_p^{-}(i)+A_p^{+}(i)$$
+
+$A_p^{in}(i)$ is an external flow to the part $i$;
+
+$A_p^{out}(i)$ is an external outflow from the part $i$;
+
+$A_p^{AtoG}(i)$ is an ,,elementary``  reaction $A to G$;  
+
+$A_p^{GtoA}(i)$ is an ,,elementary``  reaction $G to A$;
+
+$A_p^{-}(i)$ is a flow from $t-1$th part to $i$th;
+
+$A_p^{+}(i)$ is a flow from $t+1$th part to $i$th;
+
+The same defintions are valid $G_p^*(i)$   
+
+The rates of the elementary reactions are normal i.i.d. variables.
+
+\end{document}
