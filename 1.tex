@@ -23,27 +23,37 @@ What are generic solution for $A_p(x)$ and $G_p(x)$?
 Model.
 
  
-Suppose $\Omega$ is $[0,1]$.
-Discret model. 
-Interval $[0,1]$:  $N$ subintervals. Define  $G_p(i)$, $A_p(i)$. These  functions are:
-$$G_p(i)=G_p^{in}(i) + G_p^{out}(i) + G_p^{AtoG}(i) - G_p^{GtoA}(i) + G_p^{-}(i)+G_p^{+}(i)$$
+%Suppose $\Omega$ is $[0,1]$.
+%Discret model. 
+%Interval $[0,1]$:  $N$ subintervals. Define  $G_p(i)$, $A_p(i)$. These  functions are:
+%$$G_p(i)=G_p^{in}(i) + G_p^{out}(i) + G_p^{AtoG}(i) - G_p^{GtoA}(i) + G_p^{-}(i)+G_p^{+}(i)$$
+%
+%$$A_p(i)=A_p^{in}(i) + A_p^{out}(i) - A_p^{AtoG}(i) + A_p^{GtoA}(i) + A_p^{-}(i)+A_p^{+}(i)$$
+%
+%$A_p^{in}(i)$ is an external flow to the part $i$;
+%
+%$A_p^{out}(i)$ is an external outflow from the part $i$;
+%
+%$A_p^{AtoG}(i)$ is an ,,elementary``  reaction $A to G$;  
+%
+%$A_p^{GtoA}(i)$ is an ,,elementary``  reaction $G to A$;
+%
+%$A_p^{-}(i)$ is a flow from $t-1$th part to $i$th;
+%
+%$A_p^{+}(i)$ is a flow from $t+1$th part to $i$th;
+%
+%The same defintions are valid $G_p^*(i)$   
+%
+%The rates of the elementary reactions are normal i.i.d. variables.
 
-$$A_p(i)=A_p^{in}(i) + A_p^{out}(i) - A_p^{AtoG}(i) + A_p^{GtoA}(i) + A_p^{-}(i)+A_p^{+}(i)$$
 
-$A_p^{in}(i)$ is an external flow to the part $i$;
+RD model
 
-$A_p^{out}(i)$ is an external outflow from the part $i$;
+Our model based on the graph sequence whose elements are so called flow graphs.  The main property of these graphs is that all of them have the same set of vertices $V$
 
-$A_p^{AtoG}(i)$ is an ,,elementary``  reaction $A to G$;  
+Suppose $G$ is directed graph that have $N$ vertices. Some of the vertices are connected with oriented edges (also called arrows). Arrow between two vertices is associated with material flow between them.
 
-$A_p^{GtoA}(i)$ is an ,,elementary``  reaction $G to A$;
-
-$A_p^{-}(i)$ is a flow from $t-1$th part to $i$th;
-
-$A_p^{+}(i)$ is a flow from $t+1$th part to $i$th;
-
-The same defintions are valid $G_p^*(i)$   
-
-The rates of the elementary reactions are normal i.i.d. variables.
+Reaction $A+B \leftrightarrows C+D$ is associated with four graphs 
+$G_A, G_B, G_C, G_D$.
 
 \end{document}
