@@ -53,7 +53,31 @@ Our model based on the graph sequence whose elements are so called flow graphs. 
 
 Suppose $G$ is directed graph that have $N$ vertices. Some of the vertices are connected with oriented edges (also called arrows). Arrow between two vertices is associated with material flow between them.
 
-Reaction $A+B \leftrightarrows C+D$ is associated with four graphs 
-$G_A, G_B, G_C, G_D$.
+%Reaction $A+B \leftrightarrows C+D$ is associated with four graphs 
+%$G_A, G_B, G_C, G_D$.
+
+Details.
+
+Vertex can be one of types:
+
+\begin{itemize}
+\item input gate which is modelled as some (some) periodical function;
+\item output gate which is also some time and environment function;
+\item diffuse input/output gates are stochastic processes;
+\item transitive gates which are connections between edges;
+\item source gate which is special kind of input gate where materials are generated  
+\end{itemize}
+
+The type of vertex depends on material. The same vertex can be an input gate for one material and can work as output gate for another  material.
+
+There are many methods to model material flow on the edge.  We use stochastic particle transfer and diffuse model.
+
+Materials are modelled as sets of particles that we call abstract "molecules". Every partial model have a set of different molecules \textit{types}. 
+
+Some types of molecules can react. Reaction is just a (probabilistic) rule which describes conditions when one type of molecule(s) becomes another type.  
+
+    
+
+ 
 
 \end{document}
